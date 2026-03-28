@@ -15,7 +15,7 @@ function Navigation() {
                         </ul>
                     </div>
                 </div>
-                <ul className="d-none d-md-flex flex-row justify-content-around align-items-center w-25"> 
+                <ul className="d-none d-md-flex flex-row justify-content-around align-items-center w-50"> 
                     <li><p>Gallery</p></li>
                     <li><p>History</p></li>
                     <li><p>Search</p></li>
