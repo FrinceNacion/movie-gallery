@@ -1,7 +1,7 @@
 
 function MovieCard(movie) {
     return (
-        <div className="">
+        <div className="w-25">
             { movie ? (
                 <a href="">
                     <img className="img-fluid rounded-2" src={movie.poster} alt={movie.title}/>
