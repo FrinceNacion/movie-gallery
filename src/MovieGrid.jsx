@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import MovieCard from './MovieCard';
 
 function MovieGrid() {
+    const [data, setData] = useState(null);
     const [movies, setMovies] = useState([]);
     
     useEffect(() => {
@@ -9,8 +10,7 @@ function MovieGrid() {
             try{
                 const res = await fetch("https://mg-api.ddev.site/endpoints/get_trending_movies.php?page=1");
                 const data = await res.json();
-                console.log(data.success);
-                console.log(data.movies.results);
+                setData(data.movies);
                 setMovies(data.movies.results);
             } catch(err){
                 console.error(err);
@@ -18,12 +18,10 @@ function MovieGrid() {
         };
 
         fetch_movies();
-        console.log(movies);
     }, []);
 
     return(
-        <div className="row justify-content-center g-3">
- 
+        <div className="container d-grid">
             {movies.length > 0 ? (
                 movies.map((movie, index) => (
                     <p key={index}>{movie.title}</p>
