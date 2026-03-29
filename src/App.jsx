@@ -8,8 +8,6 @@ function App() {
     <>
       <div className="container d-flex flex-column gap-2">
         <Navigation />
-        <h1>Movie Gallery</h1>
-        <p>Welcome to the Movie Gallery!</p>
         <MovieGrid />
       </div>
     </>
