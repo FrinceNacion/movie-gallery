@@ -21,10 +21,12 @@ function MovieGrid() {
     }, []);
 
     return(
-        <div className="d-grid justify-content-between gap-3"
+        <div className="container m-0 d-grid"
         style={{
-          gridTemplateColumns: "repeat(5, 15%)",
-          gridTemplateRows: "repeat(3, 25%)"
+          gridTemplateColumns: "repeat(5, 17%)",
+          gridTemplateRows: "repeat(3, 25%)",
+          columnGap: "3%",
+          rowGap: "3%",
         }}>
             {movies.length > 0 ? (
                 movies.map((movie, index) => (
