@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <div className="container d-flex flex-column gap-2">
+      <div className="container-fluid d-flex flex-column gap-2 h-100">
         <Navigation />
         <MovieGrid />
       </div>
