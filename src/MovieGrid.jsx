@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import MovieCard from './MovieCard';
 
 function MovieGrid() {
-    const [data, setData] = useState(null);
     const [movies, setMovies] = useState([]);
     
     useEffect(() => {
@@ -10,7 +9,6 @@ function MovieGrid() {
             try{
                 const res = await fetch("https://mg-api.ddev.site/endpoints/get_trending_movies.php?page=1");
                 const data = await res.json();
-                setData(data.movies);
                 setMovies(data.movies.results);
             } catch(err){
                 console.error(err);
@@ -21,20 +19,16 @@ function MovieGrid() {
     }, []);
 
     return(
-        <div className="container m-0 d-grid"
-        style={{
-          gridTemplateColumns: "repeat(5, 17%)",
-          gridTemplateRows: "repeat(3, 25%)",
-          columnGap: "3%",
-          rowGap: "3%",
-        }}>
-            {movies.length > 0 ? (
+        <div className="container">
+            <div className="d-flex flex-wrap gap-3 justify-content-center">
+                {movies.length > 0 ? (
                 movies.map((movie, index) => (
                     <MovieCard key={index} movie={movie}/>
                 ))
-            ) : (
-                <p>Loading</p>
-            )}
+                ) : (
+                    <p>Loading...</p>
+                )}
+            </div>
         </div>
     );
 }
