@@ -112,6 +112,7 @@ code {
 
 .movie-card{
   max-width: 15%;
+  min-width: 100px;
 }
 
 
