@@ -110,6 +110,11 @@ code {
   background: var(--code-bg);
 }
 
+.footer{
+  background-color: #1f2028;
+  color: #2e303a;
+}
+
 .movie-card{
   max-width: 15%;
   min-width: 100px;
