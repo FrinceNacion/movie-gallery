@@ -1,16 +1,55 @@
-# React + Vite
+# Movie Gallery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Movie Gallery is an educational web-based project that showcases a movie streaming UI built with React and Vite. Designed for modern web development patterns, component design, responsive layout, and state management in a small but complete movie app.
 
-Currently, two official plugins are available:
+- A frontend-only movie browsing interface for learning and demo purposes.
+- Uses React component hierarchy to render a grid of movie cards, search, and navigation.
+- Built with Vite for fast developer experience and quick local reload.
+- Styled with CSS Bootstrap (and reset.css) for responsive and clean presentation.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+## Getting started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Clone the repository
 
-## Expanding the ESLint configuration
+```bash
+git clone https://github.com/<your-username>/movie-gallery.git
+cd movie-gallery
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Install dependencies
+
+```bash
+npm install
+```
+
+3. Start dev server
+
+```bash
+npm run dev
+```
+
+4. Open in browser
+
+The terminal will show a local URL (usually `http://localhost:5173`). Open that to view Movie Gallery.
+
+5. Build for production
+
+```bash
+npm run build
+```
+
+6. Preview production build
+
+```bash
+npm run preview
+```
+
+## Notes
+
+- This is an educational project and for personal use only
+- The Backend/API for this project is movie-gallery-API
+
+---
+
+Built with React + Vite, Bootstrap as a learning practice for frontend skills.
