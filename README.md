@@ -13,7 +13,7 @@ Movie Gallery is an educational web-based project that showcases a movie streami
 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/movie-gallery.git
+git clone https://github.com/FrinceNacion/movie-gallery.git
 cd movie-gallery
 ```
 
