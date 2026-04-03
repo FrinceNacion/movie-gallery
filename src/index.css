@@ -111,7 +111,7 @@ code {
 }
 
 .footer {
-  background-color: #1f2028;
+  background-color: rgba(22, 23, 29, 0.7);
   color: white;
   font-size: 0.85rem;
   line-height: 1.55;
