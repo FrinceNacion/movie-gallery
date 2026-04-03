@@ -19,7 +19,7 @@ function MovieGrid() {
     }, []);
 
     return(
-        <div className="container">
+        <div className="container min-vh-100">
             <div className="d-flex flex-wrap gap-3 justify-content-center">
                 {movies.length > 0 ? (
                 movies.map((movie, index) => (
