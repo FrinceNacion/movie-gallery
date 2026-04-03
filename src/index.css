@@ -118,7 +118,7 @@ code {
   padding: 1rem 1.25rem;
 }
 
-.footer-header{
+.p-subtle{
   color: #77849b;
   font-size: 0.85rem;
 }
@@ -130,6 +130,11 @@ code {
 .movie-card{
   max-width: 15%;
   min-width: 100px;
+  font-size: 0.80rem;
+}
+
+.info-pill{
+  background-color: rgba(22, 23, 29, 0.7); 
 }
 
 .navbar {
