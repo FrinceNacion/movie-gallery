@@ -23,7 +23,7 @@ function Footer(){
                 </div>
             </div>
             <div className="d-flex justify-content-center border-top border-secondary mt-2 p-2 pb-0">
-                <p>Created with love by frincefriess 🍟</p>
+                <p className="p-subtle">Created with love by frincefriess 🍟</p>
             </div>
         </footer>
     )
