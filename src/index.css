@@ -131,6 +131,7 @@ code {
   max-width: 17%;
   min-width: 100px;
   font-size: 0.80rem;
+  border: wheat 1px solid;
 }
 
 .info-pill{
