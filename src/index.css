@@ -293,15 +293,15 @@ code {
 
 /* Save Active State */
 .btn-card-action.saved {
-  color: #ec4899; /* Pink-500 */
+  color: #fdef4b; /* Bright yellow for saved state */
 }
 .btn-card-action.saved:hover {
-  background-color: rgba(236, 72, 153, 0.1);
+  background-color: rgb(253, 239, 75, 0.1);
 }
 
 .btn-card-action.saved svg {
-  fill: #ec4899;
-  stroke: #ec4899;
+  fill: #fdef4b;
+  stroke: #fdef4b;
   animation: heartPulse 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
