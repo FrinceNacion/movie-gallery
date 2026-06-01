@@ -1,6 +1,6 @@
 import "./index.css"
 
-function Footer(){
+function Footer() {
     return (
         <footer className="footer d-flex flex-column p-3 border-top border-dark-subtle">
             <div className="d-flex flex-row justify-content-evenly flex-wrap">

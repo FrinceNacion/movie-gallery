@@ -28,12 +28,12 @@ function MovieCard({ movie }) {
     const toggleSave = (e) => {
         e.preventDefault();
         e.stopPropagation();
-        
+
         try {
             const saved = localStorage.getItem("watchlist_movies");
             const savedList = saved ? JSON.parse(saved) : [];
             const movieKey = movie.imdb_id || movie.tmdb_id;
-            
+
             let updatedList;
             if (isSaved) {
                 updatedList = savedList.filter(m => (m.imdb_id || m.tmdb_id) !== movieKey);
@@ -41,7 +41,7 @@ function MovieCard({ movie }) {
                 // Save the whole movie details so it can be rendered anywhere
                 updatedList = [...savedList, movie];
             }
-            
+
             localStorage.setItem("watchlist_movies", JSON.stringify(updatedList));
             setIsSaved(!isSaved);
         } catch (e) {
@@ -121,9 +121,9 @@ function MovieCard({ movie }) {
             <div className="movie-card">
                 {/* Image & Rating Badge */}
                 <div className="movie-poster-wrapper">
-                    <img 
-                        className="movie-poster-img" 
-                        src={movie.poster} 
+                    <img
+                        className="movie-poster-img"
+                        src={movie.poster}
                         alt={movie.title}
                         loading="lazy"
                     />
@@ -148,8 +148,8 @@ function MovieCard({ movie }) {
 
                 {/* Action Buttons at Bottom */}
                 <div className="movie-card-actions">
-                    <button 
-                        className={`btn-card-action ${isSaved ? "saved" : ""}`} 
+                    <button
+                        className={`btn-card-action ${isSaved ? "saved" : ""}`}
                         onClick={toggleSave}
                         title={isSaved ? "Remove from Watchlist" : "Save to Watchlist"}
                     >
@@ -158,8 +158,8 @@ function MovieCard({ movie }) {
                         </svg>
                         <span>{isSaved ? "Saved" : "Save"}</span>
                     </button>
-                    <button 
-                        className="btn-card-action" 
+                    <button
+                        className="btn-card-action"
                         onClick={openSimilarModal}
                         title="Show Similar Movies"
                     >
@@ -207,15 +207,15 @@ function MovieCard({ movie }) {
                                         const simRating = simMovie.vote_average ? Number(simMovie.vote_average) : 0;
                                         const simYear = simMovie.year || (simMovie.release_date ? new Date(simMovie.release_date).getFullYear() : "");
                                         const simMainGenre = simMovie.genres && simMovie.genres.length > 0 ? simMovie.genres[0] : "";
-                                        
+
                                         return (
                                             <div key={i} className="col d-flex justify-content-center">
                                                 <div className="movie-card w-100" style={{ transform: "none" }}>
                                                     <div className="movie-poster-wrapper">
-                                                        <img 
-                                                            className="movie-poster-img" 
-                                                            src={simMovie.poster} 
-                                                            alt={simMovie.title} 
+                                                        <img
+                                                            className="movie-poster-img"
+                                                            src={simMovie.poster}
+                                                            alt={simMovie.title}
                                                         />
                                                         {simRating > 0 && (
                                                             <div className="movie-rating-badge">
