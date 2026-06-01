@@ -3,14 +3,14 @@ import MovieCard from './MovieCard';
 
 function MovieGrid() {
     const [movies, setMovies] = useState([]);
-    
+
     useEffect(() => {
         const fetch_movies = async () => {
-            try{
+            try {
                 const res = await fetch("https://mg-api.ddev.site/endpoints/get_trending_movies.php?page=1");
                 const data = await res.json();
                 setMovies(data.movies.results);
-            } catch(err){
+            } catch (err) {
                 console.error(err);
             }
         };
@@ -18,13 +18,13 @@ function MovieGrid() {
         fetch_movies();
     }, []);
 
-    return(
+    return (
         <div className="container min-vh-100">
             <div className="d-flex flex-wrap gap-3 justify-content-center">
                 {movies.length > 0 ? (
-                movies.map((movie, index) => (
-                    <MovieCard key={index} movie={movie}/>
-                ))
+                    movies.map((movie, index) => (
+                        <MovieCard key={index} movie={movie} />
+                    ))
                 ) : (
                     <p>Loading...</p>
                 )}
